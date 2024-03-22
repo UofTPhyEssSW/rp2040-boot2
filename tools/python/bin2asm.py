@@ -1,18 +1,15 @@
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# file: bin2asm.py
+# date: 2024-03-22
+# author: Robert Morley
 #
-#
-#
+# NOTE: With the exceptions of a few modifications in the main functions this
+#       file is directly copied for the PICO-SDK.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-import os
 import argparse
 import binascii
 import struct
-import sys
 
-
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# functions any_int and bitrev copied for the PICO_SDK git
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 def any_int(x):
     try:
