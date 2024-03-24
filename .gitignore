@@ -51,5 +51,10 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# Clion/CMake directories
 .idea/
 cmake-*/
+
+# Scratch files
+tools/docker/test.py
+tools/docker/main.c
