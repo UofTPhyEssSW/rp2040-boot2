@@ -1,5 +1,4 @@
 # Installs the latest version of CMake
-# web page : https://cmake.org/download/
 
 # 1. Find the version number for the latest release on download page
 CMAKE_VERSION=$(curl -s https://cmake.org/download/ | grep -Po '<h2[^>]*>\s*Latest Release \(\K([\d.]+)*(?=\)<\/h2>)')
