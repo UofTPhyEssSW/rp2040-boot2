@@ -1,4 +1,4 @@
-// Padded and checksummed version of: C:/github/rp2040-boot2/output/bin/bl2_w25q128jv.bin
+// Padded and checksummed version of: T:/ArduinoDevelopment/rp2040-boot2/output/bin/bl2_w25q128jv.bin
 
 .cpu cortex-m0plus
 .thumb

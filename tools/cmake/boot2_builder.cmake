@@ -23,7 +23,7 @@ function(add_bootloader SRC_DIR ASM_FILES OUTPUT_DIR)
             ALL
             DEPENDS ${BL2_NAME}_2bin
             WORKING_DIRECTORY ${PYSCRIPT_DIR}
-            COMMAND python3 ./bin2asm.py ${OUTPUT_DIR}/bin/${BL2_NAME}.bin ${OUTPUT_DIR}/asm/${BL2_NAME}.s
+            COMMAND python ./bin2asm.py ${OUTPUT_DIR}/bin/${BL2_NAME}.bin ${OUTPUT_DIR}/asm/${BL2_NAME}.s
             COMMENT "${BL2_NAME}_2asm used to to converts .bin to .s file for as boot stage2 program for SDK."
     )
 
