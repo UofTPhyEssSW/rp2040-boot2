@@ -4,25 +4,29 @@ on: [push]
 # Jobs run in parallel by defaults, each runs steps in sequence
 jobs:
   # Used to compile and build project.
-  Build-Compilation-Check:
+  DevEnv-Install:
     runs-on: ubuntu-latest
     steps:
+      # Check out this repo
+      - name: Check out this repo
+        uses: actions/checkout@v3
       # Installs Arm GNU Toolchain 13.2.rel1
       # https://github.com/marketplace/actions/arm-none-eabi-gcc-gnu-arm-embedded-toolchain
       - name: Install Arm GNU Toolchain
         uses: carlosperate/arm-none-eabi-gcc-action@v1
         with:
           release: '13.2.Rel1'
-      - name: Check Arm GNU Toolchain Install
-        run: arm-none-eabi-gcc --version
       # Install CMake version 3.29.0
       # https://github.com/marketplace/actions/install-latest-cmake
       - name: Install CMake 3.29.0
         uses: ssrobins/install-cmake@v1
         with:
           version: 3.29.0
-      - name: Check CMake Install
-        run: cmake --version
-      # Just a test message
-      - name: Test command
-        run: echo "This is a place holder until I get the action ready."
+      # Install Python and GCC
+      - name: Install Dependencies
+        run: sudo apt install -y build-essential python3 ninja-build
+      # See where we are in the VM.
+      - run: pwd
+      # Run Build and Test script
+      # TODO 
+
