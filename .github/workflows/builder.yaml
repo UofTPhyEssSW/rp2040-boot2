@@ -1,0 +1,6 @@
+name: RP2040-Boot2 Compilation action
+on: [ push]
+jobs:
+  run-on: ubuntu-latest
+  steps:
+    - run: echo "This is a place holder until I get the action ready."
