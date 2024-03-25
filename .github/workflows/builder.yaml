@@ -3,8 +3,8 @@ name: RP2040-Boot2 Compilation action
 on: [push]
 # Jobs run in parallel by defaults, each runs steps in sequence
 jobs:
-  # Job Number 1
-  test-command:
+  # Used to compile and build project.
+  Build-Compilation-Check:
     runs-on: ubuntu-latest
     steps:
       # Installs Arm GNU Toolchain 13.2.rel1
