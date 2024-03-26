@@ -4,7 +4,7 @@
 # author: Robert Morley
 #
 # NOTE: With the exceptions of a few modifications in the main functions this
-#       file is directly copied for the PICO-SDK.
+#       file is directly copied from the PICO-SDK.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import argparse
 import binascii
@@ -15,7 +15,7 @@ def any_int(x):
     try:
         return int(x, 0)
     except Exception as e:
-        raise argparse.ArgumentTypeError("expected an integer, not '{!r}'".format(x))
+        raise argparse.ArgumentTypeError("expected an integer, not '{!r}'".format(x), str(e))
 
 
 def bitrev(x, width):
@@ -35,7 +35,7 @@ def main():
     try:
         idata = open(args.ifile, "rb").read()
     except Exception as e:
-        print(f"Could not input file ${args.ifile}")
+        print(f"Could not input file ${args.ifile}", str(e))
         exit(1)
 
     if len(idata) > args.pad - 4:
@@ -61,7 +61,7 @@ def main():
                 chunk = odata[offs:min(offs + 16, len(odata))]
                 ofile.write(".byte {}\n".format(", ".join("0x{:02x}".format(b) for b in chunk)))
     except Exception as e:
-        print(f"Could not open output file ${args.ofile}")
+        print(f"Could not open output file ${args.ofile}", str(e))
         exit(1)
 
     exit(0)

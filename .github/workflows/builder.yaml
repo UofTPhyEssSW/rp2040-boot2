@@ -27,6 +27,6 @@ jobs:
         run: sudo apt install -y build-essential python3 ninja-build
       # See where we are in the VM.
       - run: pwd
-      # Run Build and Test script
-      # TODO 
+      # Run Build script to make sure all files are generated without error.
+      - run: python3 ./asm_builder.py
 

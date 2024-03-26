@@ -1,6 +1,4 @@
 
-There are no discarded input sections
-
 Memory Configuration
 
 Name             Origin             Length             Attributes
@@ -57,9 +55,9 @@ LOAD linker stubs
  .debug_line    0x00000000       0xb8 src/CMakeFiles/bl2_w25q128jv.elf.dir/w25q128jv/boot_stage2.s.obj
 
 .debug_line_str
-                0x00000000       0x74
+                0x00000000       0x5a
  .debug_line_str
-                0x00000000       0x74 src/CMakeFiles/bl2_w25q128jv.elf.dir/w25q128jv/boot_stage2.s.obj
+                0x00000000       0x5a src/CMakeFiles/bl2_w25q128jv.elf.dir/w25q128jv/boot_stage2.s.obj
 
 .debug_info     0x00000000       0x25
  .debug_info    0x00000000       0x25 src/CMakeFiles/bl2_w25q128jv.elf.dir/w25q128jv/boot_stage2.s.obj
@@ -71,5 +69,5 @@ LOAD linker stubs
  .debug_aranges
                 0x00000000       0x20 src/CMakeFiles/bl2_w25q128jv.elf.dir/w25q128jv/boot_stage2.s.obj
 
-.debug_str      0x00000000       0x82
- .debug_str     0x00000000       0x82 src/CMakeFiles/bl2_w25q128jv.elf.dir/w25q128jv/boot_stage2.s.obj
+.debug_str      0x00000000       0x68
+ .debug_str     0x00000000       0x68 src/CMakeFiles/bl2_w25q128jv.elf.dir/w25q128jv/boot_stage2.s.obj

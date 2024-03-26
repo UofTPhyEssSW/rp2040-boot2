@@ -16,7 +16,6 @@ set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/linker/rp2040_boot2.ld CACHE PATH 
 set(ASM_OUTPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/output CACHE PATH "Generator Output directory.")
 set(PYSCRIPT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/tools/python CACHE PATH "Python script directory")
 
-#include(tools/cmake/tool_chain.cmake)
 include(tools/cmake/boot2_builder.cmake)
 
 add_subdirectory(src)
