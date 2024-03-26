@@ -22,7 +22,7 @@ jobs:
         uses: ssrobins/install-cmake@v1
         with:
           version: 3.29.0
-      # Install Python and GCC
+      # Install Python, GCC, and Ninja
       - name: Install Dependencies
         run: sudo apt install -y build-essential python3 ninja-build
       # See where we are in the VM.
