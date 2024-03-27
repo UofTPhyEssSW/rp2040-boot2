@@ -12,14 +12,15 @@ import subprocess as sub
 import shutil
 
 # Project constants
-BUILD_DIR="cmake-build-bl2"                         # Build output directory
-BUILD_TYPE="Debug"                                  # Build type
-BUILD_GENERATOR="Ninja"                             # Generator program name
-ASM_TOOL_CHAIN="tools/cmake/tool_chain.cmake"       # Toolchain file (do not modify)
-CMAKE_TIMEOUT = 30                                  # CMake build timeout in seconds.
-GENERATOR_TIMEOUT = 10                              # Timeout for generator program.
+BUILD_DIR = "cmake-build-bl2"  # Build output directory
+BUILD_TYPE = "Debug"  # Build type
+BUILD_GENERATOR = "Ninja"  # Generator program name
+ASM_TOOL_CHAIN = "tools/cmake/tool_chain.cmake"  # Toolchain file (do not modify)
+CMAKE_TIMEOUT = 30  # CMake build timeout in seconds.
+GENERATOR_TIMEOUT = 10  # Timeout for generator program.
 
 CURRENT_DIR = os.getcwd()
+
 
 def CMakeBuild(build_dir, buildtype, generator, toolchain) -> int:
     '''Calls cmake to create build directory'''
@@ -88,12 +89,13 @@ def main():
 
     # If previous command was successful use ninja to build the output files.
     if ret == 0:
-        os.chdir(BUILD_DIR)         # Change current directory to build directory.
-        ret = NinjaBuild()          # Run Ninja-build
-        os.chdir("..")              # go back to repository root directory
+        os.chdir(BUILD_DIR)  # Change current directory to build directory.
+        ret = NinjaBuild()  # Run Ninja-build
+        os.chdir("..")  # go back to repository root directory
 
-    shutil.rmtree(BUILD_DIR)        # delete cmake-build-bl2 directory.
-    exit(ret)                       # Exit program with return code.
+    shutil.rmtree(BUILD_DIR)  # delete cmake-build-bl2 directory.
+    exit(ret)  # Exit program with return code.
+
 
 if __name__ == "__main__":
     main()
